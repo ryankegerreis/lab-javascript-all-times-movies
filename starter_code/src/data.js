@@ -2000,3 +2000,43 @@ var movies = [
     rate: '8.0'
   }
 ];
+
+
+// for (let i=0;i<movies.length;i++) {
+// console.log(movies[i].duration);
+// }
+
+// First Try 
+// function turnHoursToMinutes(array) {
+// for (let i=0;i<array.length;i++) {
+//   let newArray=(array.map(duration.split("h"))
+//   return newArray
+// } }
+// turnHoursToMinutes(movies);
+
+// const turnHoursToMinutes = movies.map.duration(
+//    );
+
+// function turnHoursToMinutes(array) {
+//   for (let i=0;i<array.length;i++) {
+//     let durations = array[i].duration.split(" ");
+//     let hours = Number(durations[0].replace("h",""));
+//     let minutes = [0];
+//     if
+  
+//  
+//   turnHoursToMinutes(movies);
+
+
+  // function turnHoursToMinutes(array) {
+  //   for (i=0; i< array.length; i++) {
+  //     let durations = array[i].duration.split(' ');
+  //     let hours = Number(durations[0].replace('h',''));
+  //     let minutes = 0;
+  //     if(durations[1]){
+  //       minutes = Number(durations[1].replace('min',''));
+  //     }
+  //     array[i].duration = hours*60+minutes;
+  //   }
+  //   return array
+  //  }
