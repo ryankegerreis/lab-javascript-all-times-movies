@@ -38,20 +38,47 @@ function dramaMoviesRate(array) {
   var dramaTotal = 0;
   for (i = 0; i < dramaArray.length; i++) {
     dramaTotal += dramaArray[i].rate;
-  }
+  };
 var avg = Number(dramaTotal / dramaArray.length);
  return(avg);
 }
 
 // Order by time duration, in growing order
 
+// function orderByDuration (array) {
+// var orderArray = parseInt(movies => movies.duration);
+// array.sort(function(a, b){return b-a} );
+// console.log(orderArray);
+// }
+
+
+// function turnHoursToMinutes(array) {
+//   for (i = 0; i < array.length; i++) {
+//     let durations = array[i].duration.split(" ");
+//     let hours = Number(durations[0].replace("h", ""));
+//     let minutes = 0;
+//     if (durations[1]) {
+//       minutes = Number(durations[1].replace("min", ""));
+//     }
+//     array[i].duration = hours * 60 + minutes;
+//   }
+//   return array;
+// 
+
 function orderByDuration (array) {
-
-
-array.sort(function(a, b){return b-a} )
-console.log(array);
+  for (i = 0; i < array.length; i++) {
+        let durations = array[i].duration.split(" ");
+        let hours = Number(durations[0].replace("h", ""));
+        let minutes = 0;
+        if (durations[1]) {
+          minutes = Number(durations[1].replace("min", ""));
+        }
+        array[i].duration = hours * 60 + minutes;
+      }
+      return array.sort(function(a,b){
+        return a.duration != b.duration ? a.duration-b.duration : a.title.localeCompare(b.title) 
+      });
 }
-
 
 // How many movies did STEVEN SPIELBERG direct
 
